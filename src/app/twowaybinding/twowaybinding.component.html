@@ -1,0 +1,16 @@
+ <div>
+    <label for="courses">Courses</label>
+    <input type="text" name="course" id="course" [(ngModel)]="course">
+     <button type="button" (click)="onAddCourse()">Add</button>
+
+     <div>
+       
+             <div *ngFor="let course of courseArr;let i=index">
+                 <p>{{i+1}}. {{course}}</p>
+             </div>
+            
+
+      
+     </div>
+</div>
+ 
