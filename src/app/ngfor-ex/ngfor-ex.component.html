@@ -1,0 +1,46 @@
+<div class="companies-list">
+    <h1>Total Companies :{{companyArr.length}}</h1>   
+ <div *ngFor="let company of companyArr;let index=index">
+  {{index+1}}.  {{company}}   <!-- 0+1 =1 (1)  1+1=2 (2) -->
+ </div>
+</div>
+
+<h3>Employee Count ::{{employees.length}}</h3>
+<table border="2">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody  *ngFor="let employee of employees">
+        <tr>
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.role}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<div class="Crickers-info">
+
+    <div *ngFor="let team of cricketTeams">
+        {{team.id}}
+        {{team.name}}
+        {{team.established}}
+        {{team.players[0].id}}
+        {{team.players[0].name}}
+        {{team.players[0].age}}
+        {{team.players[0].inningsPlayes}}
+        {{team.players[0].centures}}
+        {{team.players[0].halfCentures}}
+
+        
+    </div>
+    
+</div>

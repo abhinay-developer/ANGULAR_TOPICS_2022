@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 import { FormsModule } from '@angular/forms';
+import { NgforExComponent } from './ngfor-ex/ngfor-ex.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     EventbindingComponent,
     TwowaybindingComponent,
+    NgforExComponent,
   ],
   imports: [
     BrowserModule,
