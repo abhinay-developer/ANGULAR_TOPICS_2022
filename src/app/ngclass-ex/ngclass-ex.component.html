@@ -1,0 +1,19 @@
+<p>ngclass-ex works!</p>
+
+<div class="container-fluid">
+  <!--  ngClass-->
+    <div ngClass="banner">
+        <h1>My Banner</h1>
+    </div>
+  
+<!--   [ngClass]  with single class-->
+    <div  [ngClass]="class1">
+        <h1>My Banner</h1>
+    </div>
+
+<!--   [ngClass]  with multiple classes-->
+<div  [ngClass]="[class1,class2]">
+    <h1>My Banner</h1>
+</div>
+
+</div>

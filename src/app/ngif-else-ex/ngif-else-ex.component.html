@@ -1,0 +1,16 @@
+<h1>Hello World</h1>
+
+<button type="button"   (click)="onIsLoggedIn()">{{isLoggedIn?"LOGIN":"LOGOFF"}}</button>
+
+<div class="container">
+
+     <div   *ngIf="isLoggedIn; else elseBlock">
+          Welcome {{ myName }} Your Logged In Successfully
+     </div>
+     <ng-template #elseBlock>
+         
+        Please Login
+     </ng-template>
+     
+       
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+    <p>ngswitch-ex works!</p>
+    
+    <div>
+         <label for="myValue">Enter Value</label>
+        <input type="number" id="myValue" name="myValue" class="form-control" [(ngModel)]="myValue">
+    </div>
+    
+    <div class="container">
+          <div [ngSwitch]="myValue">
+            <div *ngSwitchCase="1">
+                 am One
+            </div>
+            <div *ngSwitchCase="2">
+                am two
+            </div>
+            <div *ngSwitchCase="3">
+                am three
+            </div>
+            <div *ngSwitchDefault class="display-2">
+             Please Enter the Option
+            </div>
+          </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+
+
+<div class="container m-5">
+    <button type="button" (click)="onChangeColor()" class="btn btn-success">ChangeColor</button>
+
+    <div style="color: red;">
+          am a simple styles
+    </div>
+
+    <div [ngStyle]="(isChangeColor)?{'background-color':'red','padding':'20px','width':'50%'}:{'display':'none'}">
+         am a ngstyle
+    </div>
+
+</div>

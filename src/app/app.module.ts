@@ -8,6 +8,10 @@ import { EventbindingComponent } from './eventbinding/eventbinding.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 import { FormsModule } from '@angular/forms';
 import { NgforExComponent } from './ngfor-ex/ngfor-ex.component';
+import { NgifElseExComponent } from './ngif-else-ex/ngif-else-ex.component';
+import { NgswitchExComponent } from './ngswitch-ex/ngswitch-ex.component';
+import { NgstyleExComponent } from './ngstyle-ex/ngstyle-ex.component';
+import { NgclassExComponent } from './ngclass-ex/ngclass-ex.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,10 @@ import { NgforExComponent } from './ngfor-ex/ngfor-ex.component';
     EventbindingComponent,
     TwowaybindingComponent,
     NgforExComponent,
+    NgifElseExComponent,
+    NgswitchExComponent,
+    NgstyleExComponent,
+    NgclassExComponent,
   ],
   imports: [
     BrowserModule,
