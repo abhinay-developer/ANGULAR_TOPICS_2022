@@ -1,0 +1,102 @@
+<div class="signup-from container mt-5">
+    <form>
+        <div class="row">
+            <h1>Amazon Registration</h1>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="firstName" class="form-control"
+                       [(ngModel)]="amazon.firstName"
+                    >
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" id="lastName" class="form-control"
+                    [(ngModel)]="amazon.lastName"
+                    >
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control"
+                    [(ngModel)]="amazon.email"
+                    >
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-control"
+                    [(ngModel)]="amazon.password"
+                    >
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="mobileNumber">Mobile Number</label>
+                    <input type="number" name="mobileNumber" id="mobileNumber" class="form-control"
+                    [(ngModel)]="amazon.mobileNumber"
+                    >
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="country">country</label>
+                    <select class="form-control"
+                    [(ngModel)]="amazon.country"
+                    name="country"
+                    id="country"
+                    >
+                        <option value="IND">IND</option>
+                        <option value="AUS">AUS</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary mt-3" (click)="signup()">SIGNUP</button>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <button type="reset" class="btn btn-primary m-3">RESET</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+     <div class="container" *ngIf="isTableHide">
+         <table class="table table-bordered table-striped">
+             <thead class="table-light">
+                 <tr>
+                     <th>First Name</th>
+                     <th>Last Name</th>
+                     <th>Email</th>
+                     <th>Mobile Number</th>
+                     <th>Password</th>
+                     <th>Country</th>
+                 </tr>
+             </thead>
+             <tbody *ngFor="let amazon of amazonArr">
+                 <tr>
+                     <td>{{amazon.firstName}}</td>
+                     <td>{{amazon.lastName}}</td>
+                     <td>{{amazon.email}}</td>
+                     <td>{{amazon.mobileNumber}}</td>
+                     <td>{{amazon.password}}</td>
+                     <td>{{amazon.country}}</td>
+                 </tr>
+             </tbody>
+         </table>
+     </div>
+
+</div>

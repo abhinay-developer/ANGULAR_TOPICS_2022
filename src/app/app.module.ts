@@ -12,6 +12,8 @@ import { NgifElseExComponent } from './ngif-else-ex/ngif-else-ex.component';
 import { NgswitchExComponent } from './ngswitch-ex/ngswitch-ex.component';
 import { NgstyleExComponent } from './ngstyle-ex/ngstyle-ex.component';
 import { NgclassExComponent } from './ngclass-ex/ngclass-ex.component';
+import { CustomDirective } from './directives/custom.directive';
+import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { NgclassExComponent } from './ngclass-ex/ngclass-ex.component';
     NgswitchExComponent,
     NgstyleExComponent,
     NgclassExComponent,
+    CustomDirective,
+    TemplatedrivenComponent,
   ],
   imports: [
     BrowserModule,
