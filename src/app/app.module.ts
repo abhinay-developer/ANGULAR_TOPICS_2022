@@ -21,7 +21,11 @@ import { FeaturesComponent } from './components/features/features.component';
 import { ServicesComponent } from './components/services/services.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
-
+import { ReactiveFormsFbComponent } from './reactive-forms-fb/reactive-forms-fb.component';
+import { PipesExPipe } from './pipes/pipes-ex.pipe';
+import { PipeExampleComponent } from './pipes/pipe-example/pipe-example.component';
+import {HttpClientModule} from '@angular/common/http';
+import { UserComponent } from './components/user/user.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,12 +46,17 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     ServicesComponent,
     NotfoundComponent,
     ReactiveFormsComponent,
+    ReactiveFormsFbComponent,
+    PipesExPipe,
+    PipeExampleComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

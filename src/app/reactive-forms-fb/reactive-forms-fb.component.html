@@ -1,0 +1,67 @@
+<div class="container m-5">
+    {{registrationForm.value | json}}
+    <div class="form-validations m-auto">
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+            <h1>Create Account</h1>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" class="form-control "
+                formControlName="firstName">
+                <div *ngIf="getFirstName().invalid && getFirstName().touched">
+                    <div   *ngIf="getFirstName().errors.required">
+                        <div class="text-danger fw-bold h6">
+                             firstname is required
+                        </div>
+                    </div>
+                    <div   *ngIf="getFirstName().errors.minlength">
+                        <div class="text-danger fw-bold h6">
+                            minimum length should be 5
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" class="form-control"
+                formControlName="lastName">
+                <div *ngIf="getLastName().invalid && getLastName().touched">
+                    <div class="text-danger fw-bold h6"  *ngIf="getLastName().errors.required">
+                          last name is required
+                    </div>
+                 
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="form-control"
+                formControlName="email"
+                >
+                <div *ngIf="getEmail().invalid && getEmail().touched">
+                    <div class="text-danger fw-bold h6">
+                          email is required
+                    </div>
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password" class="form-control"
+                formControlName="password" autocomplete="off"
+                >
+                <div *ngIf="getPassword().invalid && getPassword().touched">
+                    <div class="text-danger fw-bold h6" *ngIf="getPassword().errors.required">
+                          password is required
+                    </div>
+                    <div class="text-danger fw-bold h6" *ngIf="getPassword().errors.pattern">
+                          invalid password
+                    </div>
+              </div>
+              
+            </div>
+            <div class="form-group mt-2">
+                <button type="submit" class="btn btn-primary">REGISTER</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
