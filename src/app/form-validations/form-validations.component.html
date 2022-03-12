@@ -1,0 +1,52 @@
+
+<div class="container m-5">
+    {{register.value | json}}
+    {{register.status | json}}
+    <form  (ngSubmit)="onRegister()"  #register="ngForm">
+        <div class="form-validations">
+             <h1 class="text-primary">Create Account</h1>
+             <div class="form-group">
+                <label for="email">Email</label>
+                  <input type="email" name="email" id="email" class="form-control" [(ngModel)]="user.email"  required #email="ngModel" minlength="3" pattern="^[a-zA-Z]+$" maxlength="10">
+             </div>
+             <div *ngIf="email.invalid&&email.touched" >
+                  <div *ngIf="email.errors.required">
+                       <div class="text-danger"> Please Enter Email</div>
+                  </div>
+                  <div *ngIf="email.errors.minlength">
+                    <div class="text-danger"> minimum length should be 3</div>
+               </div>
+               <div *ngIf="email.errors.pattern">
+                <div class="text-danger">allows only alphabets</div>
+           </div>
+             </div>
+             <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" [(ngModel)]="user.password"  #password="ngModel" required> 
+             </div>
+             <div *ngIf="password.invalid&&password.touched" >
+                <div *ngIf="password.errors.required">
+                     <div class="text-danger"> Please Enter password</div>
+                </div>
+                <div *ngIf="password.errors.pattern">
+                    <div class="text-danger"> Invalid Password</div>
+               </div>
+                
+           </div>
+             <div class="form-group">
+                <label for="mobileNumber">Mobile Number</label>
+                <input type="number" name="mobileNumber" id="mobileNumber" class="form-control" [(ngModel)]="user.mobileNumber"   #mobileNumber="ngModel" required>
+             </div>
+             <div *ngIf="mobileNumber.invalid&&mobileNumber.touched" >
+                <div *ngIf="mobileNumber.errors.required">
+                     <div class="text-danger"> Please Enter mobile Number</div>
+                </div>
+           </div>
+             <div class="form-group">
+                 <button type="submit" class="btn btn-primary mt-2 w-100"
+                  [disabled]="register.invalid"
+                 >REGISTER</button>
+             </div>
+        </div>
+    </form>
+</div>
